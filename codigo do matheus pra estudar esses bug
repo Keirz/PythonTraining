@@ -1,0 +1,26 @@
+
+let arr = [9,2,1,4,6]; 
+let arrSize, i, j, aux, mediana;
+
+arrSize = arr.length;
+if(arrSize%2==0){
+    console.log("Erro, array par!");
+    process.exit();
+}
+for(i = 0; i < arrSize; ++i){
+    for(j = i+1; j < arrSize; ++j){
+        if(arr[i] > arr[j]){
+            aux = arr[i];
+            arr[i] = arr[j];
+            arr[j] = aux;
+        }
+    }
+}
+console.log(arr)
+mediana = Math.floor(arrSize/2);
+for(i = 0; i < arrSize; ++i){
+    if(arr[mediana]){
+        console.log(`A mediana é o número: ${arr[mediana]}`);
+        process.exit();
+    }
+}
