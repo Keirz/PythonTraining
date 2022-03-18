@@ -1,0 +1,14 @@
+entrada = str(input()).split()
+
+X = int(entrada[0])
+Y = int(entrada[1])
+Z = int(entrada[2])
+lista = [X,Y,Z]
+lista.sort()
+print(lista[0])
+print(lista[1])
+print(lista[2])
+print("")
+print(X)
+print(Y)
+print(Z)
